@@ -37,5 +37,37 @@ function Col()
     colNum++;
 }
 
+function goodbyeRow()
+{if(rowNum === 0)
+    {
+        alert("row # = 0")
+    }
+    else{
+    let table = document.getElementById("table")
+    table.deleteRow(rowNum-1)
+    rowNum--;
+}
+}
+
+function goodbyeCol()
+{if(colNum === 0)
+    {
+        alert("col # = 0")
+    }
+    else{
+        let count = 0
+        
+        let allRows = document.querySelectorAll("tr");
+        for(let i = 0; i<rowNum; i++)
+        {
+            allRows[count].removeChild(allRows[count].lastChild);
+
+            count++;
+        }
+        numCol--;
+}
+}
+
+
 
 
