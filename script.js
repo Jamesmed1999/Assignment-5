@@ -23,23 +23,19 @@ function Col()
         alert("no rows to add columns too")
     }
     else{
-
-    
-    let newcol = document.createElement("td")
-    document.getElementById("col").appendChild(newcol)
-    colNum++
-    console.log(document.getElementById("col"))
+        let count = 0
+        
+        let allRows = document.querySelectorAll("tr");
+        
+        for(let i = 0; i<rowNum; i++)
+        {
+            let cell = document.createElement("td");
+            allRows[count].appendChild(cell)
+            count++
+        }
     }
+    colNum++;
 }
 
-function goodbyeRow()
-{if(rowNum === 0)
-    {
-        alert("row # = 0")
-    }
-    else{
-    let table = document.getElementById("table")
-    table.deleteRow(rowNum-1)
-    rowNum--;
-}
-}
+
+
