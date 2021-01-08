@@ -18,9 +18,21 @@ function Row()
 
 function Col()
 {
-
-    let newcol = document.createElement("td")
-    document.getElementById("col").appendChild(newcol)
-    colNum++
-    console.log(document.getElementById("col"))
+    if(rowNum === 0)
+    {
+        alert("no rows to add columns too")
+    }
+    else{
+        let count = 0
+        
+        let allRows = document.querySelectorAll("tr");
+        
+        for(let i = 0; i<rowNum; i++)
+        {
+            let cell = document.createElement("td");
+            allRows[count].appendChild(cell)
+            count++
+        }
+    }
+    colNum++;
 }
