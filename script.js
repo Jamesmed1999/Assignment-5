@@ -18,9 +18,28 @@ function Row()
 
 function Col()
 {
+    if(rowNum === 0)
+    {
+        alert("no rows to add columns too")
+    }
+    else{
 
+    
     let newcol = document.createElement("td")
     document.getElementById("col").appendChild(newcol)
     colNum++
     console.log(document.getElementById("col"))
+    }
+}
+
+function goodbyeRow()
+{if(rowNum === 0)
+    {
+        alert("row # = 0")
+    }
+    else{
+    let table = document.getElementById("table")
+    table.deleteRow(rowNum-1)
+    rowNum--;
+}
 }
