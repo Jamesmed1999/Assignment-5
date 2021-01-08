@@ -12,5 +12,15 @@ function Row()
         newRows.appendChild(cell)
     }
     table.appendChild(newRows)
-    rowNum+1
+    rowNum++
+    console.log(rowNum)
+}
+
+function Col()
+{
+
+    let newcol = document.createElement("td")
+    document.getElementById("col").appendChild(newcol)
+    colNum++
+    console.log(document.getElementById("col"))
 }
