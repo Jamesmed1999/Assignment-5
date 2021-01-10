@@ -1,20 +1,24 @@
-let rowNum = 1
+let rowNum = document.getElementById("table").childElementCount
 let colNum = 1
 
+    
 function Row()
 {
 
     let newRows = document.createElement("tr")
     let table = document.getElementById("table")
+    
+    
+    
     for(let i = 0; i<colNum; i++)
     {
         let cell = document.createElement("td")
         newRows.appendChild(cell)
     }
     table.appendChild(newRows)
+    
     rowNum++
-    console.log(rowNum)
-    console.log(rowNum)
+
 }
 
 function Col()
@@ -26,19 +30,18 @@ function Col()
     else{
         let count = 0
         
-        let everyTable = document.querySelectorAll("tr")
+
+        let everyTable = document.querySelectorAll("tr");
         
         for(let i = 0; i<rowNum; i++)
         {
-            let cell = document.createElement("td")
+            let cell = document.createElement("td");
+
             everyTable[count].appendChild(cell)
             count++
         }
     }
     colNum++;
+
 }
-
-
-
-
 
