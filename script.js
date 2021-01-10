@@ -18,7 +18,7 @@ function Row()
     table.appendChild(newRows)
     
     rowNum++
-    
+
 }
 
 function Col()
@@ -30,14 +30,18 @@ function Col()
     else{
         let count = 0
         
+
         let everyTable = document.querySelectorAll("tr");
         
         for(let i = 0; i<rowNum; i++)
         {
             let cell = document.createElement("td");
+
             everyTable[count].appendChild(cell)
             count++
         }
     }
     colNum++;
+
 }
+
