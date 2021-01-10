@@ -14,6 +14,7 @@ function Row()
     table.appendChild(newRows)
     rowNum++
     console.log(rowNum)
+    console.log(rowNum)
 }
 
 function Col()
