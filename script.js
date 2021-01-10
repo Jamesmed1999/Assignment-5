@@ -20,3 +20,24 @@ function Row()
     rowNum++
     
 }
+
+function Col()
+{
+    if(rowNum === 0)
+    {
+        alert("no rows to add columns too")
+    }
+    else{
+        let count = 0
+        
+        let everyTable = document.querySelectorAll("tr");
+        
+        for(let i = 0; i<rowNum; i++)
+        {
+            let cell = document.createElement("td");
+            everyTable[count].appendChild(cell)
+            count++
+        }
+    }
+    colNum++;
+}
